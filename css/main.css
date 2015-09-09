@@ -1,0 +1,483 @@
+/*  fonts */
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Subrayada:400,700|Open+Sans:400,600,700,800,300italic,300|Kaushan+Script);
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+p,
+a,
+h1,
+h2,
+h3,
+h4, 
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+h2,
+h3,
+h4 {
+	font-weight: 600;
+}
+
+@media(max-width: 345px) {
+	body {
+		padding-top:50px;
+	}
+}
+
+
+
+/***************************** NAVBAR TO TRANSPARENT *******************************/
+
+.navbar {
+	background-color: transparent;
+	background: transparent;
+	border: none;
+	color: #3b94ff;
+	z-index: 100;
+	margin-bottom: 0;
+	border-radius: 0;
+	transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
+}
+
+.navbar-default {
+	color: #3b94ff;
+	font-weight: 500;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #3b94ff;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #3b94ff;
+	font-weight: 500;
+	font-size: 1em;
+	text-transform: lowercase;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
+  color: #3b94ff;
+ 
+}
+.navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:focus {
+  color: #3b94ff;
+  text-decoration: none;
+}
+
+/* opaque class which will be attached on scroll */
+
+.navbar.opaque {
+  background-color: white;
+  background: white;
+  transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
+  box-shadow: 0px 0px 4px #969696;
+}
+.navbar.opaque .navbar-brand {
+  color: #3b94ff;
+  transition: color 1s ease 0s;
+}
+.navbar.opaque .navbar-nav > li > a {
+  color: #3b94ff;
+  transition: color 1s ease 0s;
+  text-shadow: none;
+  font-size: 1em;
+}
+.navbar.opaque .navbar-nav > li > a:active {
+  text-decoration: none;
+}
+
+.navbar-brand {
+	color: #6186b2;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 1.9em;
+	font-weight: 600;
+	text-shadow: 1px 1px 1px black;
+}
+
+.navbar-default .navbar-brand {
+	color: #3b94ff ;
+	font-weight: 600;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #3b94ff;
+  background-color: transparent;
+}
+
+/*bootstrap overrides */
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.active>a {
+    background-image: -webkit-linear-gradient(top,#FFFEFE 0,#FDFCFC 100%);
+    background-image: -o-linear-gradient(top,#dbdbdb 0,#e2e2e2 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#dbdbdb),to(#e2e2e2));
+    background-image: linear-gradient(to bottom,#FFFFFF 0,#3B93FF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdbdb', endColorstr='#ffe2e2e2', GradientType=0);
+    background-repeat: repeat-x;
+    -webkit-box-shadow: inset 0 3px 9px rgba(0,0,0,.075);
+    box-shadow: inset 0 3px 9px rgba(0,0,0,.075);
+
+}
+
+.dropdown-menu > li > a {
+	color: #3b94ff;
+}
+.dropdown-menu > li > a:hover {
+	color: #3b94ff;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #ffffff;
+    background-color: #ffffff;
+}
+
+/*  end overrides */
+
+@media(max-width: 370px) {
+	.navbar-brand {
+		font-size: 1.4em;
+	}
+}
+
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+}
+
+
+/* full page slide changes  */
+
+/* Centered texts in each section
+	* --------------------------------------- */
+.section{
+	text-align:center;
+}
+
+
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+#section0,
+#section1,
+#section2,
+#section3,
+#slide1,
+#slide2,
+#slide3{
+	background-size: cover;
+	background-attachment: no-repeat fixed;
+	background-position: 50% 50%;
+	border-bottom: 1px solid white;
+	
+}
+
+/* Defining each sectino background and styles
+* --------------------------------------- */
+#section0{
+	background-image: url(img/bg1Bw.jpg);
+	padding: 30% 0 0 0;
+}
+#section2{
+	background-image: url(img/bg2Bw.jpg);
+	padding: 6% 0 0 0;
+}
+#section3{
+	background-image: url(img/bg3Bw.jpg);
+	padding: 6% 0 0 0;
+	color: #fff;
+}
+
+
+
+	/*Adding background for the slides
+* --------------------------------------- */
+#slide1{
+	background-image: url(../img/bg1Bw.jpg);
+	padding: 1% 0 0 0;
+}
+#slide2{
+	background-image: url(../img/bg2Bw.jpg);
+	padding: 1% 0 0 0;
+}
+#slide3{
+	background-image: url(../img/bg3Bw.jpg);
+	padding: 1% 0 0 0;
+}
+
+.slide h1 {
+	color: white;
+	font-size: 3.1em;
+	font-weight: 800;
+	font-family: 'Montserrat Subrayada', sans-serif;
+	text-shadow: 2px 2px 2px black;
+}
+
+.slide h3 {
+	color: white;
+	font-size: 2.1em;
+	font-weight: 800;
+	font-family: 'Open Sans', sans-serif;
+	text-shadow: 2px 2px 2px black;
+	text-transform: uppercase;
+}
+
+
+
+.slide-logo {
+	height: 225px;
+	width: 150px;
+}
+
+@media screen and (max-width: 450px) {
+	.slide-logo {
+		display: none;
+	}
+}
+
+
+/*-------------------------------- intro Section ---------------------------------*/
+
+.intro-mid {
+	background-color: black;
+	color: #f8f8f8;
+}
+
+.intro-mid p {
+	font-size: 1em;
+}
+
+.intro-blocks {
+	text-align: center;
+}
+.intro-pics {
+	padding-bottom: 10px;
+}
+.intro-pics img {
+	padding: 4px;
+	border: 1px solid #B9B3B3;
+	margin: 0 auto;
+}
+
+.jumbotron {
+	padding: 15px 0px 20px 0px;
+}
+
+.middle-align {
+	padding-top: 65px;
+}
+
+@media(max-width: 991px) {
+	.middle-align {
+		padding-top:15px;
+	}
+}
+
+.bottom-space {
+	padding-bottom: 20px;
+}
+
+
+
+/*       home scroll page  */
+
+.home-scroll {
+	background: url(../img/bg4.jpg) no-repeat top center fixed;
+	background-color: #0059c4;
+	min-height: 500px;
+	text-align: center;
+	color: white;
+}
+
+.home-scroll h2 {
+	color: white;
+	font-size: 2.5em;
+	font-weight: 600;
+	font-family: 'Montserrat Subrayada', sans-serif;
+	text-shadow: 2px 2px 2px black;
+}
+
+.home-scroll h4 {
+	color: white;
+	font-size: 2.0em;
+	font-weight: 600;
+	
+	text-shadow: 2px 2px 2px black;
+}
+
+
+
+/*  main pages  */
+
+.header-graphic {
+	min-height: 150px;
+	padding-top: 25px;
+}
+
+.art-back {
+	background: url(../img/bg5.jpg) no-repeat center center fixed;
+	background-size: cover;
+	width: 100%
+	;
+}
+.art-back2 {
+	background: url(../img/bg-ee.jpg) no-repeat center center fixed;
+	background-size: cover;
+	width: 100%
+	;
+}
+.art-back3 {
+	background: url(../img/bg-ws.jpg) no-repeat center center fixed;
+	background-size: cover;
+	width: 100%
+	;
+}
+.art-back4 {
+	background: url(../img/bg-sh.jpg) no-repeat center center fixed;
+	background-size: cover;
+	width: 100%
+	;
+}
+.art-back5 {
+	background: url(../img/bgcity.jpg) no-repeat center center fixed;
+	background-size: cover;
+	width: 100%
+	;
+}
+@media(max-width: 450px) {
+	.home-scroll {
+		background: url(../img/bg4.jpg) repeat-y top center;
+		height: 100%;
+		width: auto;
+	}
+}
+
+
+/* art 101  */
+.number {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #aecc1b;
+    color: #fff;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.faq {
+	padding-right: 10px;
+	border-right: 1px solid #f8f8f8;
+}
+
+ul.faq {
+	list-style: none;
+}
+
+.num-text p {
+	overflow: hidden;
+
+}
+
+/*art sections */
+.art-space {
+	padding-left: 20px;
+}
+
+.art-pics img {
+	padding: 4px;
+	border: 1px solid #B9B3B3;
+}
+
+/* footer styles  */
+
+.foot-style {
+	min-height: 350px;
+	padding-top: 25px;
+	background-color: black;
+	color: white;
+}
+.foot-style a, p, h2, h3, h4, {
+	color: white;
+}
+
+
+
+/*
+
+
+
+.navbar {
+	background-color: transparent;
+	background: transparent;
+	border: none;
+	color: white;
+	z-index: 100;
+	margin-bottom: 0;
+	border-radius: 0;
+	transition: background-color 1s ease 0s; 
+}
+
+.navbar-default {
+	color: white;
+	font-weight: 500;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+	font-weight: 500;
+	font-size: 1em;
+	text-transform: lowercase;
+	text-shadow: 1px 1px 1px black;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
+  color: white;
+ 
+}
+.navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:focus {
+  color: white;
+  text-decoration: none;
+}
+
+*/
