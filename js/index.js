@@ -1,5 +1,5 @@
 // full page slider
-/*  
+
 $(function() {
     
     $('#fullpage').fullpage({
@@ -23,25 +23,3 @@ $(window).scroll(function() {
     }
  });
 });  
-
-*/
-
-
-// main page slideshow
-$('.bxslider').bxSlider({
-  minSlides: 2,
-  maxSlides: 4,
-  slideWidth: 250,
-  slideMargin: 10
-});
-
-// contact form
-var form = $('.contact-form');
-  form.submit(function () {
-    $this = $(this);
-    $.post($(this).attr('action'), $('.contact-form').serialize(), function(data) {
-      $this.prev().text(data.message).fadeIn().delay(3000).fadeOut();
-    },'json');
-    return false;
-  });
-

@@ -34,7 +34,7 @@ h4 {
 .navbar {
 	background-color: transparent;
 	background: transparent;
-	border: none;
+	border-bottom: 1px solid white;
 	color: #3b94ff;
 	z-index: 100;
 	margin-bottom: 0;
@@ -61,7 +61,6 @@ h4 {
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active {
   color: #3b94ff;
- 
 }
 .navbar-default .navbar-nav > li > a:visited, .navbar-default .navbar-nav > li > a:focus {
   color: #3b94ff;

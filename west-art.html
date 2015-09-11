@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="artList">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,8 +20,10 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="shortcut icon" href="favicon.ico">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        <script src="js/app.js"></script>
     </head>
-    <body>
+    <body ng-controller="ArtListCtrlWest">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -81,7 +83,7 @@
 
       <div class="col-md-3">
         <div class="middle-align">
-        <p><a class="btn-spacing pull-right btn btn-primary" href="local-maps.html" role="button">Local Maps &raquo;</a></p>
+        <p><a class="btn-spacing pull-right btn btn-primary" href="maps.html" role="button">Local Maps &raquo;</a></p>
         </div>
       </div>
       </div>
@@ -95,28 +97,15 @@
         
 
         <div class="col-md-8 art-space">
-         <img class="img img-responsive" src="img/westside/kingalfred.jpg" alt="King">
-          <h4>40 King Alfred and His Court - Jeff Fetty</h4>
-          <small>1990 800 Pennsylvania Avenue and Washington Street</small>
-          <p>Alfred the Great, King of England from 871-899 AD, created strong alliances with Welsh leaders. As the daffodil is the national flower of Wales, perhaps this sculpture suggests Alfred surrounded by his allies?</p>
-        <br>
-        <hr>
-
-        <img class="img img-responsive" src="img/westside/piertopier.jpg" alt="Peer">
-          <h4>41 Peer to Pier Mural Project - Various Artists</h4>
-          <small>2011 100 Washington Street West</small>
-          <p>The West Side of Charleston is cut off from the city center by the Elk River and a highway. These murals are designed not only to provide content and color beneath the highway for pedestrians and cars to enjoy, but also to link the West Side with the rest of Charleston.</p>
-        <br> <hr>
-
-        <img class="img img-responsive" src="img/westside/westsidetile.jpg" alt="Tile">
-          <h4>42 West Side Tile Mural - Rob Cleland, Jeff Miller</h4>
-          <small>2010 1500 block of Washington Street West</small>
-          <p>This six foot tall mural is an example of how a diverse set of individuals can come together to create a community artwork. The mural comprises a series of central images designed by the lead artists accompanied by 400 ceramic tiles painted by residents, business owners, and other community members. How many different symbols do you see in this piece?</p>
-        <br> <hr>
-
-       
-       
-
+        
+        <div ng-repeat='artItem in artWests'>   
+         <img class="img img-responsive" ng-src='img/westside/{{artItem.link}}' alt="{{artItem.alt}}">
+              <h4>{{artItem.name}}</h4>
+              <small>{{artItem.small}}</small>
+              <p>{{artItem.description}}</p>
+          <br> <hr>
+        </div>
+            
         </div>
      
       
@@ -240,8 +229,7 @@
         <script src="js/vendor/plugins/jquery.easing.1.3.js"></script>
         <script src="js/vendor/plugins/jquery.fitvids.js"></script>
         <script src="js/vendor/jquery.bxslider.min.js"></script>
-        <script src="js/vendor/jquery.fullPage.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+       
         <script src="js/main.js"></script>
 
         

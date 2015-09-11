@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app='artList'>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,8 +20,10 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="shortcut icon" href="favicon.ico">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        <script src="js/app.js"></script>
     </head>
-    <body>
+    <body ng-controller='ArtListCtrl'>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -81,7 +83,7 @@
 
       <div class="col-md-3">
         <div class="middle-align">
-        <p><a class="btn-spacing pull-right btn btn-primary" href="local-maps.html" role="button">Local Maps &raquo;</a></p>
+        <p><a class="btn-spacing pull-right btn btn-primary" href="maps.html" role="button">Local Maps &raquo;</a></p>
         </div>
       </div>
       </div>
@@ -95,152 +97,16 @@
         
 
         <div class="col-md-8 art-space">
-         <img class="img img-responsive" src="img/downtown/festivale.jpg" alt="Festival">
-          <h4>01 Festival Delle Arti - Harry Marinksy</h4>
-          <small>2005 Clay Center, Lee Street and Leon Sullivan Way</small>
-          <p>The Clay Center seeks works that invite the public to interact with the art. Often one finds children joining in the parade of these six, bronze-cast costumed children. This playful sculpture encourages children to explore creativity and the arts.</p>
+        <div ng-repeat='artItem in artWorks'>   
+         <img class="img img-responsive" ng-src='img/downtown/{{artItem.link}}' alt="{{artItem.alt}}">
+          <h4>{{artItem.name}}</h4>
+          <small>{{artItem.small}}</small>
+          <p>{{artItem.description}}</p>
         <br>
         <hr>
-
-        <img class="img img-responsive" src="img/downtown/hallelujah.jpg" alt="Hallelujah">
-          <h4>02 Hallelujah - Albert Paley</h4>
-          <small>2009 Clay Center, Lee Street and Leon Sullivan Way</small>
-          <p>Sixty-four feet tall and forty feet in diameter, this monumental sculpture marks the entrance to the Clay Center, an invitation to explore the arts and sciences within. The form and shapes of the abstract sculpture seem to reference the programs in the building. Could it be a scientific or musical instrument? A tool for a giant to draw the stars? Step back and enjoy the full magnitude of the work or walk inside and experience its soaring height reminiscent of a cathedral.</p>
-          <p>The artist has completed many works of public art, including the portal gates for the Renwick Gallery of the Smithsonian Institution in Washington, DC. He was the first artist to receive Institute Honors by the American Institute of Architects, the most prestigious award given by the organization to a non-architect.</p>
-        <br> <hr>
-
-        <img class="img img-responsive" src="img/downtown/labac.jpg" alt="Labac">
-          <h4>03 Labac - Arthur Gibbons</h4>
-          <small>1988 Clay Center, Lee Street and Brooks Streets</small>
-          <p>Standing nine feet tall, this sculpture is formed from several pieces of steel that have weathered to a rich, brown patina. The title holds a secret: it is the word “cabal” spelled backwards, meaning a group of insiders engaged in a plot or intrigue.</p>
-          <p>The Clay Center was designed by Kiser Straw and Kolodner of Philadelphia, Pennsylvania and Gates, Calloway, Moore and West of Beckley, West Virginia.</p>
-        <br> <hr>
-
-        <img class="img img-responsive" src="img/downtown/arch.jpg" alt="Arch">
-          <h4>04 Charleston Arch - Charles Ginnever</h4>
-          <small>2009 Clay Center, Dickinson and Lee Street</small>
-          <p>The artist designed this sculpture so the five flattened hexagons can sometimes seem to appear three dimensional. How does the artist create this optical illusion?</p>
-          <p>The artist studied sculpture and photography, and is known for the minimalist style presented in this work. In 1999, Ginnever received the Lee Krasner Foundation Lifetime Achievement Award.</p>
-        <br> <hr>
-
-        <img class="img img-responsive" src="img/downtown/wrests.jpg" alt="Man">
-          <h4>05 Man Wrests from the Earth- Milton Horn</h4>
-          <small>1968 Dickinson and Lee street</small>
-          <p>Born in Russia, the artist immigrated to the United States in 1915. He completed many public artworks across the country. This high basrelief represents the artist’s signature style of allegorical sculpture using figures and objects to tell stories or convey meaning. What story is he telling here?.</p>
-        <br> <hr>
-
-        <img class="img img-responsive" src="img/downtown/gassaway.jpg" alt="Henry">
-          <h4>06 Henry Gassaway Davis</h4>
-          <small>1926 Capitol and Lee Streets</small>
-          <p>Davis was a Senator from West Virginia from 1871-1883, as well as the Democratic candidate for Vice President in 1904. Before his political career, he was a brakeman for Baltimore and Ohio Railroad, later founding the Potomac and Piedmont Coal and Railway Company. Another cast of this sculpture is located at Davis and Elkins College in Elkins, West Virginia.</p>
-        <br> <hr>
-
-        <img class="img img-responsive" src="img/downtown/trombonist.jpg" alt="Trombonist">
-          <h4>07 The Trombonist - Mark Blumenstein</h4>
-          <small>1988 Clay Center, Lee Street and Brooks Streets</small>
-          <p>Davis Park was originally designed by Alice Recknagel Ireys, a prominent landscape architect who completed more than 1,000 projects in her lifetime. One of her most famous landscapes is the Fragrance Garden at the Brooklyn Botanical Garden in New York City, a model for designing gardens for people with disabilities.</p>
-          <p>Across the street from the park at 800 Lee Street is the Kanawha Valley Building. It was built in 1929 as the Kanawha Valley Bank. Designed by architects Alfred C. Bossom and associate architect Charles A. Haviland, it was Charleston’s tallest building for fifty years.</p>
-        <br> <hr>
-
-        <img class="img img-responsive" src="img/downtown/bikerack.jpg" alt="Bike">
-          <h4>08 Sulptural Bike Racks - Various Artists</h4>
-          <small>2011 Capitol Street, Capitol Market, Haddad Park, Lee Street Triangle</small>
-          <p>Charleston’s collection of creative bike racks result from a call for proposals organized by FestivALL Charleston, the city’s annual art festival. They asked artists to submit ideas to blur the lines between street furniture and sculpture. Structural Systems worked with all of the artists, except blacksmith Jeff Fetty, to translate their two dimensional drawings into three dimensional, functional bike racks.</p>
-        <br> <hr>
-
-        <img class="img img-responsive" src="img/downtown/fountain.jpg" alt="Fountain">
-          <h4>09 Fountain Sculpture - Robert Cronbach</h4>
-          <small>2009 Kanawha County Public Library, 123 Capitol Street</small>
-          <p>The artist designed the bronze sculpture and the fountain when the library renovated this former federal building in 1966. What elements of the building inspired this work? What do the shapes of the sculpture resemble? The artist also designed sculpture and fountains for the United Nations General Assembly Building in New York.</p>
-        <br> <hr>
-
-        <img class="img img-responsive" src="img/downtown/mortar.jpg" alt="Mortar">
-          <h4>10 Mortar Man- Joseph Mullins</h4>
-          <small>1968 Between 110 and 112 Capitol Street</small>
-          <p>The artist sculpted this whimsical, diminutive figure during a creativity break while perched on a scaffold. Using mortar left over from the lettering on the building’s façade, he created this two inch tall figure that has a fan club in Charleston and beyond.</p>
-        <br> <hr>
-
-        <img class="img img-responsive" src="img/downtown/unity.jpg" alt="Unity">
-          <h4>11 Unity - Vladimir Smirnov and Dr. Cubert Smith</h4>
-          <small>1998 East End of Haddad Riverfront Park</small>
-          <p>Created through the collaboration of two artists: Smith, of Charleston, and Smirnov, from Russia, the sculpture’s title refers to Charleston’s relationship with its sister city Korolyov. West Virginia was home to Chuck Yeager, the first to break the sound barrier, and rocket boy Homer Hickam. Korolyov is well known as the cradle of Soviet and Russian space exploration. The city is named for Sergey Pavlovich Korolyov, the father of the Russian space program. Since 1997 Korolyov has hosted the International Space Olympics, an annual competition for young people to promote space related research.</p>
-        <br> <hr>
-
-         <img class="img img-responsive" src="img/downtown/mural.jpg" alt="Brick">
-          <h4>12 Paint on brick - Bart Davies</h4>
-          <small>2009 One Bridge Place, Dickinson Street Facade</small>
-          <p>The houses on the side of this building only seem real. They were created in the “trompel’oeil” painting style, which translates to “deceive the eye” from French. Locals call this the “San Francisco Mural,” referring to the architectural style of the houses.</p>
-          <p>This building was designed by architects Yost and Packard for the Lewis and Hubbard Company in 1898.</p>
-        <br> <hr>
-         <img class="img img-responsive" src="img/downtown/fullness.jpg" alt="Earth">
-          <h4>13 From the Fullness of the Earth - Robert Erle Martens</h4>
-          <small>1941 Boulevard Tower, 1018 Kanawha Boulevard East at Leon Sullivan Way</small>
-          <p>After studying at the Cranbrook Academy of Art, Martens attended Yale University to study architecture, and later formed the firm Martens and Son Architects with his son Walter. He served as President of the West Virginia Board of Architects. The architect commissioned himself to make this artwork as well as this structure, known as the Union Carbide Building.</p>
-        <br> <hr>
-         <img class="img img-responsive" src="img/downtown/tree.jpg" alt="Tree">
-          <h4>14 The Annunciation and Tree of Life - John Collier</h4>
-          <small>2008 Sacred Heart Co-Cathedral, Leon Sullivan Way and Virginia Street</small>
-          <p>Two religious figures reside in the landscaped lot across from Sacred Heart Co-Cathedral in The Annunciation, the Angel Gabriel, standing on a tree stump, and the Virgin Mary, standing next to a fig tree. Tree of Life is the artist’s interpretation of the crucifixion of Jesus Christ.</p>
-          <p>Leon Sullivan Way has some of Charleston’s most outstanding sacred buildings. Saint John’s Episcopal Church, at Quarrier Street, is on the National Register of Historic Places and was designed by Warne, Tucker, Silling and Hutchison, Pursell, Isaac.</p>
-        <br> <hr>
-         <img class="img img-responsive" src="img/downtown/aspirations.jpg" alt="Aspirations">
-          <h4>15 Aspirations - Alfred Kloke</h4>
-          <small>1984 500 Virginia Street at Laidley Street</small>
-          <p>This sculpture located in the plaza in front of the United Center is a tall, vertical, abstract piece that serves as the fountain’s focal point. The landscape was designed by noted landscape architect and author William H. Whyte with M. Paul Friedberg and Partners. The sculpture sits in front of a modernist office building designed by Odell and Associates.</p>
-        <br> <hr>
-         <img class="img img-responsive" src="img/downtown/cabriole.jpg" alt="Cabriole">
-          <h4>16 Cabriole - Jimilu Mason</h4>
-          <small>1980 300 Summers Street at Lee Street</small>
-          <p>Cabriole is a wonderful example of a sculpture capturing a moment in time. The three male figures depicted here are performing a cabriole, an advanced ballet jump. During the leap, a dancer moves both calves together in the air with a quick, scissors-like motion. The dancers seem frozen in this explosive movement.</p>
-          <p>The sculpture is located at the entry to the BBT building, designed by the Houston architecture firm Wilson, Morris, Crain and Anderson in 1976, who also designed the Astrodome.</p>
-        <br> <hr>
-         <img class="img img-responsive" src="img/downtown/assisi.jpg" alt="Saint">
-          <h4>17 Saint Francis of Assisi - W.D. Hopen</h4>
-          <small>1988 Clay Center, Lee Street and Brooks Streets</small>
-          <p>Saint Francis lived from 1186- 1226. Known as the patron saint of animals and the environment, he is usually depicted with creatures. Here he holds a bird and a squirrel.</p>
-        <br> <hr>
-         <img class="img img-responsive" src="img/downtown/elkdelta.jpg" alt="Elk">
-          <h4>18 Elk Delta - Jim Sanborn</h4>
-          <small>1980 Charleston Civic Center, Clendenin and Lee Streets</small>
-          <p>Commissioned as a gateway to Charleston, the artist uses bisecting planes of different materials to create an architectural space. Walk through the sculpture and notice how it feels like you are in a series of rooms. The artist has completed many public art commissions, including a sculpture containing a code at the Central Intelligence Agency’s building in Langley, Virginia that has taken more than twenty years to decipher.</p>
-        <br> <hr>
-         <img class="img img-responsive" src="img/downtown/starburst.jpg" alt="Starburst">
-          <h4>19 Starburst - Linda Howard</h4>
-          <small>1994 Charleston Civic Center, Quarrier Street and Civic Center Drive</small>
-          <p>This sculpture almost appears to be a drawing, or perhaps a complicated piece of origami, made from aluminum tubes.</p>
-        <br> <hr>
-         <img class="img img-responsive" src="img/downtown/home.jpg" alt="Home">
-          <h4>20 Home Is Where the Art Is - Various Artists</h4>
-          <small>2008 301 Piedmont Road</small>
-          <p>This mural, commissioned by Habitat for Humanity of Kanawha and Putnam County, transforms the Re-Store parking lot into a vibrant place. The artists used the concept of home as inspiration.</p>
-          <p>From left to right the artists are: Andy King, Charles Jupiter Hamilton, Kelly Osborn Huffman, Amanda Jane Miller, youth from the East End Family Resource Center led by Rick Goosman, Mark Wolfe, Amy Williams, the advanced art class of Charleston Catholic led by Rebecca Burch, and Dane Klingaman.</p>
-        <br> <hr>
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
+       
         </div>
-     
-     
-
-
-
-
-
-      
-
       
       </div> <!-- /container -->  
 
@@ -362,8 +228,7 @@
         <script src="js/vendor/plugins/jquery.easing.1.3.js"></script>
         <script src="js/vendor/plugins/jquery.fitvids.js"></script>
         <script src="js/vendor/jquery.bxslider.min.js"></script>
-        <script src="js/vendor/jquery.fullPage.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        
         <script src="js/main.js"></script>
 
         
