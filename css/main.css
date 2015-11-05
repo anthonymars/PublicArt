@@ -181,6 +181,23 @@ h4 {
 
 
 /* full page slide changes  */
+@media(max-width: 979px) {
+	.slide h3 {
+		display: none;
+	}
+}
+
+@media(max-width: 979px) {
+	.slide h1 {
+		
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.slide-logo {
+		
+	}
+}
 
 /* Centered texts in each section
 	* --------------------------------------- */
@@ -262,11 +279,7 @@ h4 {
 	width: 150px;
 }
 
-@media screen and (max-width: 450px) {
-	.slide-logo {
-		display: none;
-	}
-}
+
 
 
 /*-------------------------------- intro Section ---------------------------------*/
@@ -436,7 +449,67 @@ ul.faq {
 	color: white;
 }
 
+/****************  mid section ***********************************/
 
+.eventrow {
+	max-width: 100%;
+	margin-top:-29px;
+}
+
+.eventrow .col-md-4 {
+	padding:1px;
+}
+
+
+.img1 {
+	height: 300px;
+	background: url(../img/mids/artmare-color.jpg) no-repeat center center;
+	background-size: cover;
+	width:100%;
+	margin-bottom:25px;
+	margin-left:0;
+	margin-right:0;
+}
+
+.img2 {
+	height: 300px;
+	background: url(../img/mids/artCraft-color.jpg) no-repeat center center;
+	background-size: cover;
+	width:100%;
+	margin-bottom:25px;
+	margin-left:0;
+	margin-right:0;
+}
+
+.img3 {
+	height: 300px;
+	background: url(../img/mids/artwalk-color.jpg) no-repeat center center;
+	background-size: cover;
+	width:100%;
+	margin-bottom:25px;
+	margin-left:0;
+	margin-right:0;
+}
+
+.eventrow p {
+	color: white;
+	font-size: 1.1em;
+	text-align: center;
+	padding-top: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-shadow: 1px 1px 1px black;
+}
+
+@media(max-width: 991px) {
+	.img1 {
+		margin-bottom: 1px;
+	}
+
+	.img2 {
+		margin-bottom: 1px;
+	}
+}
 
 /*
 
